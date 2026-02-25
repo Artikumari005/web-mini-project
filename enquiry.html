@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry | India Last Minute Engineering College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>ILMEC</h1>
+                <span>India Last Minute Engineering College</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="departments.html">Departments</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="enquiry.html" class="active">Enquiry</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header page-header-img">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <h1>Online Enquiry</h1>
+            <p>We Are Here to Help - Send Us Your Query</p>
+        </div>
+    </header>
+
+    <!-- Enquiry Form Section -->
+    <section class="enquiry-section">
+        <div class="container">
+            <div class="enquiry-wrapper">
+                <div class="enquiry-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions about our courses, admissions, or any other aspect of ILMEC? Fill out the form and our team will get back to you within 24 hours.</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <h4>Address</h4>
+                                <p>India Last Minute Engineering College<br>Education City, Tech Valley<br>Pin: 123456</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 1234567890<br>+91 0987654321</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@ilmec.edu.in<br>admissions@ilmec.edu.in</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🕐</span>
+                            <div>
+                                <h4>Office Hours</h4>
+                                <p>Mon - Sat: 9:00 AM - 5:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="enquiry-form-container">
+                    <form id="enquiryForm" class="enquiry-form" novalidate>
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                            <span class="error-message" id="fullNameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address">
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit mobile number">
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="courseInterest">Course of Interest <span class="required">*</span></label>
+                            <select id="courseInterest" name="courseInterest">
+                                <option value="">-- Select a Course --</option>
+                                <option value="cse">B.Tech - Computer Science & Engineering</option>
+                                <option value="ece">B.Tech - Electronics & Communication Engineering</option>
+                                <option value="ee">B.Tech - Electrical Engineering</option>
+                                <option value="me">B.Tech - Mechanical Engineering</option>
+                                <option value="ce">B.Tech - Civil Engineering</option>
+                                <option value="it">B.Tech - Information Technology</option>
+                                <option value="mtech-cse">M.Tech - Computer Science & Engineering</option>
+                                <option value="mtech-vlsi">M.Tech - VLSI Design</option>
+                                <option value="mtech-me">M.Tech - Mechanical Engineering</option>
+                                <option value="mtech-ps">M.Tech - Power Systems</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message" id="courseInterestError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="queryType">Query Type</label>
+                            <select id="queryType" name="queryType">
+                                <option value="admission">Admission Related</option>
+                                <option value="course">Course Related</option>
+                                <option value="fee">Fee Structure</option>
+                                <option value="campus">Campus Visit</option>
+                                <option value="placement">Placements</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Enter your message (minimum 10 characters)"></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Submit Enquiry</button>
+                        <button type="reset" class="btn btn-secondary btn-block">Clear Form</button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <div class="success-icon">✓</div>
+                        <h3>Thank You!</h3>
+                        <p>Your enquiry has been submitted successfully.</p>
+                        <p>Our team will contact you within 24 hours.</p>
+                        <button type="button" class="btn btn-primary" onclick="resetForm()">Submit Another Enquiry</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ILMEC</h3>
+                    <p>India Last Minute Engineering College</p>
+                    <p>Excellence in Engineering Education</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>📍 Education City, Tech Valley</p>
+                    <p>📞 +91 1234567890</p>
+                    <p>✉️ info@ilmec.edu.in</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 India Last Minute Engineering College. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
