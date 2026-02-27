@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initVideoSlideshow();
     initScrollAnimations();
+    initGalleryToggle();
 });
 
 /**
@@ -69,5 +70,59 @@ function initScrollAnimations() {
         el.classList.add('animate-on-scroll');
         observer.observe(el);
     });
+}
+
+/**
+ * Gallery Toggle - View More/Less
+ */
+function initGalleryToggle() {
+    const moreImages = document.querySelectorAll('.more-images');
+    const btn = document.getElementById('viewMoreBtn');
+    
+    // Hide more images initially
+    moreImages.forEach(item => {
+        item.style.display = 'none';
+    });
+    
+    // Make first 3 images visible initially
+    const galleryItems = document.querySelectorAll('.gallery-grid .gallery-item');
+    galleryItems.forEach((item, index) => {
+        if (index < 3) {
+            item.style.display = 'block';
+        }
+    });
+}
+
+function toggleGallery() {
+    const moreImages = document.querySelectorAll('.more-images');
+    const btn = document.getElementById('viewMoreBtn');
+    const isHidden = moreImages[0].style.display === 'none';
+    
+    if (isHidden) {
+        // Show more images
+        moreImages.forEach(item => {
+            item.style.display = 'block';
+        });
+        btn.innerHTML = `
+            View Less Images
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+            </svg>
+        `;
+    } else {
+        // Hide more images
+        const galleryItems = document.querySelectorAll('.gallery-grid .gallery-item');
+        galleryItems.forEach((item, index) => {
+            if (index >= 3) {
+                item.style.display = 'none';
+            }
+        });
+        btn.innerHTML = `
+            View More Images
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+        `;
+    }
 }
 
